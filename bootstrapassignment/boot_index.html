@@ -14,7 +14,7 @@
     
 <body>
     
-        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light" id="navbar-celius">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -48,16 +48,23 @@
                     <li class="nav-itam dropdown">
 
                       <a class="nav-link dropdown-toggle" data-toggle="dropdown">Log In</a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" px-4 py-3>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" px-20 py-17>
+                        <form class="was-validated">
                         <div class="form-group">
-                          <a class="username-title">Enter username</a>
+                          <div class="invalid-feedback">Please enter a username.</div>
+                          <label for="userValidation" class="username-title">Enter username</label>
+                          <textarea class="form-control is-invalid" id="validdationTextarea1"></textarea>
+                          <input type="text" class="form-control is-valid" id="usernameValidation" required>
                         </div>
                         <input type="text" name="" class="form-control input_user" value="" placeeholder="username">
                         <div class="form-group">
                             <a class="password-title">Enter password</a>
                             <i class="fas fa-key"></i>
                               <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
-                        </div>
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters or emoji.
+                        </small>
+                            </div>
                         <div class="form-group">
                           <div class="form-check">
                             <input type="checkbox" class="form-check-input" id="dropdownCheck">
@@ -76,6 +83,7 @@
                             <div class="d-flex justify-content-center links">
                               <a class="underlineHover" href="#"></a>Forgot Password?</a>
                             </div>
+                          </form>
                     </div>
                   </li>
                     
@@ -84,13 +92,15 @@
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Sign up</button>
-
                    
                   </form>
 
                 </div>
               </nav>
+              <div data-spy="scroll" data-target="#navbar-celius" data-offset="0">
+                <h4 id="home">Home</h4>
+                <p>This is the homepage.</p>
+              </div>
               <h1>Home</h1>
 
     <div class="jumbotron">
@@ -145,6 +155,9 @@
           <a class="password-title">Enter password</a>
             <i class="fas fa-key"></i>
               <input type="password" name="" class="form-control input_pass" value="" placeholder="password">
+              <small id="passwordHelpBlock" class="form-text text-muted">
+                  Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters or emoji.
+                </small>
 
             <div class="d-flex justify-content-center mt-3 login_container">
               <button type="button" name="button" class="btn login_btn">Login</button>
